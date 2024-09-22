@@ -1,0 +1,51 @@
+@mixin titlebar-caption--button {
+    -webkit-app-region: no-drag;
+
+    width: 3.5em;
+    height: 100%;
+
+    background: none;
+    border: none;
+
+    transition: background 150ms linear;
+    
+    &:hover {  
+        &#titlebar-close--button {
+            @include theme() {
+                background: themed('close');
+            }
+        }
+
+        @include theme() {
+            background: themed('hover');
+        }
+    }  
+
+    @include theme() {
+        color: themed('primary');  
+    }
+}
+
+@mixin titlebar-navigation--button {
+    -webkit-app-region: no-drag;
+
+    margin: 0 0.1em;
+    padding: 0.25em 0.75em;
+
+    background: none;
+    border: none;
+    border-radius: 0.2em;
+
+    font-size: 0.75em;
+    font-family: 'Inter', sans-serif;
+
+    &:hover {  
+        @include theme() {
+            background: themed('hover');
+        }
+    } 
+
+    @include theme() {
+        color: themed('primary');  
+    }
+}

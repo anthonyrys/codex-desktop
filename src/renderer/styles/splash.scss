@@ -1,0 +1,36 @@
+@import 'themes';
+@import 'keyframes';
+@import 'mixins';
+
+@import 'globals';
+@import 'ui';
+
+#splash {
+    width: 100%;
+    height: 100%;
+
+    @include theme() {
+        background: themed('background');
+    }
+    
+    #splash-loader--container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 100%;
+        height: 100%;
+    
+        #splash--loader {
+            @include loader();
+        }
+    }
+}
+
+#root {
+    -webkit-app-region: drag;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

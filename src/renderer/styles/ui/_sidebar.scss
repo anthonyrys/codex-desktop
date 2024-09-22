@@ -1,0 +1,8 @@
+#sidebar {
+    width: 10em;
+    height: 100%;
+
+    @include theme() {
+        background: themed('submenu');
+    }
+}

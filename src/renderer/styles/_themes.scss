@@ -1,0 +1,47 @@
+$themes: (
+    dark--theme: (
+        'background': #2C313C,
+
+        'menu': #1B1D23,
+        'submenu': #272C36,
+        
+        'primary': #FFFFFF,
+        
+        'hover': rgba(255, 255, 255, 0.1),
+        'press': rgba(255, 255, 255, 0.25),
+        'close': #D11A2A,
+        
+        'load': rgba(255, 255, 255, 0.15)  
+    ),
+
+    light--theme: (
+        'background': #FFFFFF,
+    
+        'menu': #F0F0F0,
+        'submenu': #E0E0E0,
+    
+        'primary': #2C313C,
+    
+        'hover': rgba(44, 49, 60, 0.1),
+        'press': rgba(44, 49, 60, 0.25),
+        'close': #D11A2A,
+    
+        'load': rgba(44, 49, 60, 0.15)
+    )
+);
+
+@mixin theme() {
+    @each $theme, $map in $themes {
+        $theme-map: $map !global;
+
+        .#{$theme} & {
+            @content;
+        }
+    }
+
+    $theme-map: null !global;
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
