@@ -5,7 +5,7 @@ import { loadTheme } from './utils/theme';
 import { Titlebar, Sidebar, Content } from './ui';
 import './styles/app.scss';
 
-export default function App(): React.ReactElement {
+function App(): React.ReactElement {
     React.useEffect(function(): void {
         loadTheme();
     });

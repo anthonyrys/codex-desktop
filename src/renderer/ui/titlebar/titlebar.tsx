@@ -18,8 +18,8 @@ export function Titlebar(): React.ReactElement {
     }
 
     function onMaximizeRestore(_: React.MouseEvent<HTMLButtonElement>): void {
-        if (!maximized) global.window.Bridge.onApp('maximize');
-        else if (maximized) global.window.Bridge.onApp('restore');
+        if (maximized) global.window.Bridge.onApp('restore');
+        else global.window.Bridge.onApp('maximize');
     }
 
     function onClose(_: React.MouseEvent<HTMLButtonElement>): void {

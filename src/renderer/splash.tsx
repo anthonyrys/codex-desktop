@@ -4,7 +4,7 @@ import React from 'react';
 import { loadTheme } from './utils/theme';
 import './styles/splash.scss';
 
-export default function Splash(): React.ReactElement {
+function Splash(): React.ReactElement {
     React.useEffect(function(): any {
         loadTheme();
 
