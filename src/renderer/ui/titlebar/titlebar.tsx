@@ -1,7 +1,7 @@
 import React from 'react';
-import * as ReactIconsVSC from 'react-icons/vsc';
 
 import { Button } from '../../components';
+import { TitleMinimizeIcon, TitleMaximizeIcon, TitleRestoreIcon, TitleCloseIcon } from '../../components';
 
 export function Titlebar(): React.ReactElement {
     const [maximized, setMaximized] = React.useState<boolean>(global.window.Bridge.isApp('maximized'));
@@ -30,17 +30,17 @@ export function Titlebar(): React.ReactElement {
         <section id='titlebar'>
             <div id='titlebar-caption--wrapper'>
                 <Button onClick={ onMinimize }>
-                    <ReactIconsVSC.VscChromeMinimize size={ 16 } />
+                    <TitleMinimizeIcon size={ 16 } />
                 </Button>
 
                 <Button onClick={ onMaximizeRestore }>
                     { !maximized 
-                        ? <ReactIconsVSC.VscChromeMaximize size={ 16 } /> 
-                        : <ReactIconsVSC.VscChromeRestore size={ 16 } /> }
+                        ? <TitleMaximizeIcon size={ 16 } /> 
+                        : <TitleRestoreIcon size={ 16 } /> }
                 </Button>
 
                 <Button id='titlebar-close--button' onClick={ onClose }>
-                    <ReactIconsVSC.VscChromeClose size={ 16 } />
+                    <TitleCloseIcon size={ 16 } />
                 </Button>
             </div>
         </section>
