@@ -14,5 +14,15 @@
     "outDir": "./dist",
     "strict": true ,
     "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+        "@main/*": ["src/main/*"],
+        "@renderer/*": ["src/renderer/*"],
+        
+        "@components": ["src/renderer/components"],
+        "@styles/*": ["src/renderer/styles/*"],
+        "@ui": ["src/renderer/ui"],
+        "@utils/*": ["src/renderer/utils/*"]
+    },
   }
 }

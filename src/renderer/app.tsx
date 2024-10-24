@@ -1,9 +1,9 @@
 import ReactDOMClient from 'react-dom/client';
 import React from 'react';
 
-import { loadTheme } from './utils/theme';
-import { Titlebar, Sidebar, Content } from './ui';
-import './styles/app.scss';
+import { Titlebar, Sidebar, Content } from '@ui';
+import { loadTheme } from '@utils/theme';
+import '@styles/app.scss'
 
 function App(): React.ReactElement {
     React.useEffect(function(): void {

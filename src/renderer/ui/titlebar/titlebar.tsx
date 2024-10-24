@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button } from '../../components';
-import { TitleMinimizeIcon, TitleMaximizeIcon, TitleRestoreIcon, TitleCloseIcon } from '../../components';
+import { TitleMinimizeIcon, TitleMaximizeIcon, TitleRestoreIcon, TitleCloseIcon,
+        Button } from '@components';
 
 export function Titlebar(): React.ReactElement {
     const [maximized, setMaximized] = React.useState<boolean>(global.window.Bridge.isApp('maximized'));

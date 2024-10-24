@@ -1,5 +1,5 @@
-import React from 'react';
 import * as Ariakit from "@ariakit/react";
+import React from 'react';
 import CLSX from 'clsx';
 
 export const Button = React.forwardRef<HTMLButtonElement, Ariakit.ButtonProps>(

@@ -1,8 +1,8 @@
 import ReactDOMClient from 'react-dom/client';
 import React from 'react';
 
-import { loadTheme } from './utils/theme';
-import './styles/splash.scss';
+import { loadTheme } from '@utils/theme';
+import '@styles/splash.scss'
 
 function Splash(): React.ReactElement {
     React.useEffect(function(): any {

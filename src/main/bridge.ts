@@ -1,6 +1,6 @@
 import Electron from 'electron';
 
-import { loadPreferences, savePreferences } from './bridge/preferences';
+import { loadPreferences, savePreferences } from './locals/preferences';
 
 interface Bridge {
     onSplash(action: 'done'): void;
